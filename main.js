@@ -18,6 +18,14 @@ function setup() {
 function draw() {
   background(0);
   player.show();
+  moveTargets();
+  for (var i = 9; i >= 0; i--) {
+    targets[i].show();
+  }
+  keyPressed();
+  //target new Target();
+    }
+function moveTargets(){
   for (var i = 9; i >= 0; i--) {
     if(targets[i].x>600){
        targetsDir=-1;
@@ -36,13 +44,7 @@ function draw() {
   for (var i = 9; i >= 0; i--) {
     targets[i].move(targetsDir*6)
   }
-  for (var i = 9; i >= 0; i--) {
-    targets[i].show();
-  }
-  keyPressed();
-  //target new Target();
-    }
-
+}
 function shiftAll(){
   for (var i = 9; i >= 0; i--) {
           targets[i].shift(10);
