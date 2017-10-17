@@ -52,11 +52,11 @@ function shiftAll(){
 }
 function keyPressed(){// moves ship. need firing code block -Argenis
   if (keyCode === RIGHT_ARROW){
-    if(player.x != width){
+    if(player.x < width){
       player.move(1);
     }
   } else if (keyCode === LEFT_ARROW){
-    if(player.x !=0){
+    if(player.x > 0){
       player.move(-1)
     }
   }
